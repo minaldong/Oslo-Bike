@@ -1,0 +1,22 @@
+﻿@using OsloCityBike.Models
+
+@model Root
+
+<table class="table">
+	<thead>
+		<th>ID</th>
+		<th>Title</th>
+		<th>Subtitle</th>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Stations)
+		{
+			<tr>
+				<td>@item.ID</td>
+				<td>@item.Title</td>
+				<td>@item.SubTitle</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

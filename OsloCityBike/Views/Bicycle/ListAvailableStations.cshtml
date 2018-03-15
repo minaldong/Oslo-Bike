@@ -1,0 +1,26 @@
+﻿@using OsloCityBike.Models
+
+@model RootAvailable
+
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-8">
+		<table class="table">
+			<thead>
+			<th>ID</th>			
+			<th width="20%">Available Bikes</th>
+			<th>Available Locks</th>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.Stations)
+				{
+					<tr>
+						<td>@item.ID</td>
+						<td>@item.Availability.Bikes</td>
+						<td>@item.Availability.Locks</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
